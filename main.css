@@ -1,0 +1,498 @@
+/******************************** ALL CSS FÖR INDEX.HTML ********************************/
+body {
+  line-height: 1.4;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: grid;
+  grid-template-areas: 
+  'logo . .  . . . contact-info btn-header';
+}
+
+.contact-info {
+  grid-area:contact-info;
+  text-align: left;
+  margin-top: 22px;
+  font-family: 'Hind Guntur', sans-serif; /* Font från Google fonts, som länkas under <head>*/
+}
+
+.logo {
+  grid-area: logo;
+  width: 340px;
+  height:auto;
+  margin: 10px;
+}
+
+.btn-header {  /*Knappen som sitter vid headern */
+  grid-area: btn-header;
+  background: #EAD2AC;
+  color:#fff;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border:0;
+  font-family: 'Hind Guntur', sans-serif;
+  text-align: center;
+  padding: 20px 100px 40px 30px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  max-width: 70px;
+  height: 20px;
+}
+
+
+.btn { /* Knappen som sitter på förstasidan "hem",  och ligger precis nedanför företagets slogan */
+  grid-area: btn;
+  background: #8BBEB2;
+  color:#fff;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border:0;
+  font-family: 'Hind Guntur', sans-serif;
+}
+
+/* CSS för området på första sidan */
+.showcase {
+grid-area: showcase;
+min-height: 600px;
+background: url(https://image.freepik.com/free-photo/notebook-laptop-office_33807-577.jpg);
+background-size: cover;
+background-position: center;
+padding: 3rem;
+display: flex;
+flex-direction: column;
+align-items: start;
+justify-content: center;
+}
+
+.showcase h1{
+  font-size: 4rem;
+  margin-bottom: 0;
+  color:white;
+  font-family: 'Hind Guntur', sans-serif;
+}
+
+.showcase p{
+  font-size: 1.3rem;
+  margin-top:0;
+  color:#fff;
+  font-family: sans-serif;
+}
+
+.main-nav ul { /* CSS för navigeringsmenyn - som är densamma på alla sidor */
+  display: grid;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.main-nav a{
+  background:#98C1D9;
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color:#fff;
+  text-transform: uppercase;
+  font-size:1.3rem;
+  font-family: 'Hind Guntur', sans-serif;
+}
+
+.main-nav a:hover{
+  background:#B0BAC6;
+}
+
+footer{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+background:#EAD2AC;
+}
+
+.footer-company{ /*Den del av footern som har text */
+  display: grid;
+  grid-column: 2;
+  padding: 14px;
+  line-height: 2.4rem;
+  text-align: left;
+}
+
+.footer-socials{ /*Den del av footern som har sociala medier ikoner */
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  justify-content: space-around;
+  margin: 0;
+  padding: 50px;
+  font-size: 40px;
+}
+
+.footer-socials a{
+  text-decoration: none;
+  color:#000;
+}
+
+/******************************** ALL CSS FÖR CONTACT.HTML ********************************/
+
+input[type=text], select, textarea { /*Detta är taget från w3 schools, ett meet the team formulär*/
+  width: 100%;
+  padding: 12px;cc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  border: 1px solid #c
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #8BBEB2;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #A1DFD1;
+}
+
+.contact{
+display: grid;
+grid-template-columns: 1fr 2fr 1fr;
+background:#92A0AF;
+padding: 30px;
+font-size: 20px;
+}
+
+.contact-facts{
+  grid-column: 2;
+}
+
+.container-contact { /*Är medveten om att namngivningen är lite dum på denna. Ville specificera att denna container innehåller */
+display: grid;       /* kontaktuppgifter */
+grid-template-columns: 1fr 2fr 1fr;
+background:#EAD2AC;
+padding: 50px;
+font-size: 20px;
+font-family: 'Hind Guntur', sans-serif;
+}
+
+#container {
+  display: grid;
+  grid-column:2;
+}
+
+.btn-fastservice /*CSS för knappen som ligger precis nedanför kontaktformuläret*/
+{
+  border-radius: 3px;
+  background: #8BBEB2;
+  color:#fff;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border:0;
+}
+
+.contact{
+display: grid;
+grid-template-columns: 1fr 2fr 1fr;
+background:#fff;
+padding: 30px;
+font-size: 20px;
+font-family: 'Hind Guntur', sans-serif;
+}
+
+.contact-details{
+  grid-column: 2;
+}
+
+/****************************************ALL CSS FÖR JOBS.HTML *****************************/
+
+.hero-image { /* CSS för bilden som täcker hela jobs.html sidan*/
+min-height: 650px;
+background: url("https://image.freepik.com/free-photo/close-up-image-programer-working-his-desk-office_1098-18707.jpg");
+background-size: cover;
+background-position: center;
+padding: 3rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.hero-image h1{
+  font-size: 4rem;
+  margin-bottom: 0;
+  color:#fff;
+  font-family: 'Hind Guntur', sans-serif;
+}
+
+.hero-image p{
+  font-size: 1.3rem;
+  margin-top:0;
+  color:#fff;
+}
+.hero-btn {
+  grid-area: btn;
+  background: #8BBEB2;
+  color:#fff;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border:0;
+  border-radius: 10px;
+  font-family: 'Hind Guntur', sans-serif;
+}
+
+
+/******************************************** ALL CSS FÖR ABOUT.HTML *********************************************/
+html {
+  box-sizing: border-box;
+
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card { 
+   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+
+  -webkit-box-shadow: 10px 11px 5px -4px rgba(0,0,0,0.32);
+-moz-box-shadow: 10px 11px 5px -4px rgba(0,0,0,0.32);
+box-shadow: 10px 11px 5px -4px rgba(0,0,0,0.32);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: #8BBEB2;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #8BBEB2;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color:#5F5F6F;
+}
+
+.meet-the-team #who-are-we { /*CSS för rubriken på sidan about.html*/
+  font-size: 1.9rem;
+  color:#000;
+  text-align: center;
+  font-family: 'Hind Guntur', sans-serif;
+}
+
+.our-vision{
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+background:#FFF;
+font-size: 20px;
+}
+
+.our-vision-box1{ /*Bild som hör ihop med "hur vi ser på framtiden"*/
+display: grid;
+grid-column: 1;
+background: url("https://image.freepik.com/free-photo/smart-city-global-network-concept_34777-412.jpg");
+background-size: cover;
+background-position: center;
+padding: 3rem;
+margin: 40px;
+border-radius: 20px;
+}
+
+.our-vision-box2{ /* Text som hör ihop med "hur vi ser på framtiden"*/
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  font-size: 1.2rem;
+}
+
+.our-history{ /*Specificerar grid områden */
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+background:#FFF;
+font-size: 20px;
+}
+
+.our-history-box1{ /*Bild som hör ihop med "vår historia"*/
+display: grid;
+grid-column: 1;
+background: url("https://image.freepik.com/free-photo/programming-code-abstract-technology-background-software-developer-computer-script_34663-31.jpg");
+background-size: cover;
+background-position: center;
+padding: 3rem;
+margin: 40px;
+border-radius: 20px;
+}
+
+.our-history-box2{/*Text som hör ihop med "vår historia"*/
+display: grid;
+grid-column-start: 2;
+grid-column-end: 5;
+font-size: 1.2rem;
+}
+
+
+/******************************************** ALL CSS FÖR INVOLVEMENT.HTML *********************************************/
+/*Är medveten om att namnet på filen är missvisande, detta är för att jag först hade annat innehåll på denna sida*/
+/*Sedan gjorde jag om sidan till "våra kompetenser" istället och glömde ändra namn */
+.boxes{ /* Specificerar områden för de olika boxarna*/
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 1.3rem;
+  font-family: 'Hind Guntur', sans-serif;
+  padding: 1.4rem;
+  margin: 1rem;
+}
+
+.box-involvement-1{ /*Första texten under "våra kompetenser"*/
+  grid-column: 1; /*Placerad i ruta/kolumn 1*/
+  background: #fff;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.box-involvement-2{
+  grid-column: 2;
+  background: #fff;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+
+.box-involvement-3{
+  grid-column: 3;
+  background: #fff;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+
+.box-involvement-4{
+  grid-column: 4;
+  background: #fff;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.box-pic{ /* Specificerar bildernas ramar och storlek under "våra kompetenser"*/
+  width:240px;
+  height: 170px;
+  border-radius: 10px;
+}
+
+
+
+/****************************** MEDIA QUERIES  ***********************************************/
+
+@media (max-width: 700px){
+  .showcase{
+    grid-template-columns: 1fr;
+  }
+
+  .showcase h1{
+    font-size: 1.9rem;
+  }
+
+  .main-nav ul{
+    grid-template-columns: 1fr;
+  }
+
+  .logo{
+    width: 100%;
+    height: 80%;
+    margin:3px;
+  }
+  .contact-info{
+    font-size: 0.6rem;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .btn-header{
+    display: block;
+    text-align: center;
+    margin:auto;
+  }
+
+  .footer-company{
+    grid-template-columns: 1fr;
+    font-size: 1.3rem;
+  }
+
+  .footer-socials{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-image{
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text h1{
+     font-size: 1.9rem;
+  }
+
+
+  .contact{
+    grid-template-columns: 1fr;
+  }
+
+  .container-contact{
+    grid-template-columns: 1fr;
+  }
+
+  .our-vision{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .our-history{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .boxes{
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
+}
